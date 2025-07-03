@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #0f0f0f;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      h1 {
+        font-size: 6rem;
+        margin-bottom: 0.5rem;
+        animation: fadeIn 1s ease-in-out;
+      }
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        color: #ccc;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+      a {
+        padding: 0.75rem 1.5rem;
+        background-color: #00d8ff;
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        animation: fadeIn 2s ease-in-out;
+      }
+      a:hover {
+        background-color: #00aacc;
+      }
+      .glow {
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, #00d8ff22 10%, transparent 60%);
+        animation: pulse 3s infinite ease-in-out;
+        z-index: -1;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 0.3;
+        }
+        50% {
+          transform: scale(1.1);
+          opacity: 0.6;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0.3;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="glow"></div>
+    <h1>404</h1>
+    <p>Oops! The page you're looking for doesn't exist.</p>
+    <a href="/blog-app">🏠 Back to Home</a>
+  </body>
+</html>

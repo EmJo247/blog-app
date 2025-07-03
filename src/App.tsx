@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import LoginSignup from './components/LoginSignup';
 import ManageBlog from './components/manageBlog';
 import { useAppSelector } from './hooks';
+import NotFound from './NotFound';
 
 function App() {
   const session = useAppSelector((state) => state.session.session);
