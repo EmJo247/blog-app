@@ -9,7 +9,7 @@
 /coverage
 
 #secret
-.env
+.envg
 
 # production
 /build
