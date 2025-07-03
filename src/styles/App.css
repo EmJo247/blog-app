@@ -1,0 +1,78 @@
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f6f6f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: white;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.input,
+.textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.button {
+  background-color: #007c89;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background-color: #005e66;
+}
+
+.blog-card {
+  background-color: #fff;
+  border-top: 1px solid #e1e1e1;
+  padding: 20px 0;
+}
+
+.blog-title {
+  font-size: 18px;
+  margin: 0;
+}
+
+.blog-date {
+  font-size: 12px;
+  color: #888;
+  margin: 5px 0;
+}
+
+.blog-content {
+  font-size: 14px;
+  color: #333;
+}

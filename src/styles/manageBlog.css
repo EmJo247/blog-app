@@ -1,0 +1,176 @@
+
+body {
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to top right, #4b2c91, #a45de7);
+  background-size: cover;
+  background-position: center;
+  min-height: 160vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 0;
+}
+
+
+
+.container {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 60px;
+  width: 160%;
+  max-width: 600px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.logout {
+  background: white;
+  color: black;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.logout:hover {
+  background: #f0f0f0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.input,
+.textarea {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.textarea {
+  height: 100px;
+  resize: none;
+}
+
+.button {
+  background: white;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 5px;
+}
+
+.button:hover {
+  background-color: #ddd;
+}
+
+.button.cancel {
+  background: #ff6b6b;
+  color: white;
+  margin-left: 10px;
+}
+
+.button.edit {
+  background: #ffd166;
+  color: black;
+}
+
+.button.delete {
+  background: #ef476f;
+  color: white;
+  margin-left: 10px;
+}
+
+.blog-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.blog-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.blog-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.blog-content::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.blog-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.blog-email,
+.blog-date {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.actions {
+  margin-top: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.page-info {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-email {
+  font-size: 1rem;
+  color: #fdfdfd;
+}
