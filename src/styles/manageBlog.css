@@ -173,4 +173,5 @@ body {
 .user-email {
   font-size: 1rem;
   color: #fdfdfd;
+  font-weight: bold;
 }
