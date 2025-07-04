@@ -101,13 +101,9 @@ function ManageBlog({ userEmail }: ManageBlogProps) {
     setContent('');
   };
 
-  const handleLogout = async () => {
-    const { error } = await supabase.auth.signOut();
-    if (error) {
-      console.error('Logout error:', error);
-    }
-    dispatch(clearSession());
-    navigate('/');
+  const handleLogout = () => {
+  dispatch(clearSession());
+  navigate('/');
   };
 
   const nextPage = () => {
