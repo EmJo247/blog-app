@@ -48,19 +48,18 @@ export default function LoginSignup() {
 
   return (
     <div className="login-container">
-      <h2 className="text-xl font-bold mb-4">{isLogin ? 'Login' : 'Sign Up'}</h2>
+      <h2>{isLogin ? 'Login' : 'Sign Up'}</h2>
 
       <input
         type="email"
         placeholder="Email"
-        className="w-full mb-3 p-2 border rounded"
+
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
         type="password"
         placeholder="Password"
-        className="w-full mb-3 p-2 border rounded"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
@@ -76,13 +75,13 @@ export default function LoginSignup() {
             setIsLogin(!isLogin);
             setMessage('');
           }}
-          className="text-blue-500 underline"
+          
         >
           {isLogin ? 'Sign up' : 'Login'}
         </button>
       </p>
 
-      {message && <p className="mt-4 text-center text-red-600">{message}</p>}
+      {message && <p>{message}</p>}
     </div>
   );
 }

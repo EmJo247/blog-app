@@ -19,6 +19,7 @@ function ManageBlog({ userEmail }: ManageBlogProps) {
   const [editingId, setEditingId] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalBlogs, setTotalBlogs] = useState(0);
+  const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
@@ -46,25 +47,28 @@ function ManageBlog({ userEmail }: ManageBlogProps) {
   }, [currentPage]);
 
   const addBlog = async () => {
-    if (!title || !content) return;
+  if (!title.trim() || !content.trim()) {
+    setErrorMessage('Please fill in all fields.');
+    return;
+  }
 
-    const { error } = await supabase
-      .from('blog')
-      .insert([{ title, content, email: userEmail }]);
+  const { error } = await supabase
+    .from('blog')
+    .insert([{ title, content, email: userEmail }]);
 
-    if (error) {
-      console.error(error);
-      return;
-    }
+  if (error) {
+    console.error(error);
+    return;
+  }
 
-    setTitle('');
-    setContent('');
-    setCurrentPage(1);
-    setTimeout(() => {
-      fetchBlogs();
-    }, 0);
+  setTitle('');
+  setContent('');
+  setCurrentPage(1);
+  setErrorMessage('');
+  setTimeout(() => {
+    fetchBlogs();
+  }, 0);
   };
-
   const deleteBlog = async (id: number) => {
     const { error } = await supabase
       .from('blog')
@@ -90,6 +94,7 @@ function ManageBlog({ userEmail }: ManageBlogProps) {
       .eq('email', userEmail);
     if (error) console.error(error);
     setEditingId(null);
+    setErrorMessage('');
     setTitle('');
     setContent('');
     fetchBlogs();
@@ -133,6 +138,7 @@ function ManageBlog({ userEmail }: ManageBlogProps) {
       </div>
 
       <div className="form">
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
         <input
           className="input"
           placeholder="Title"

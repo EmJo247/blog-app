@@ -8,13 +8,18 @@ body {
   background-size: cover;
   background-position: center;
   min-height: 160vh;
+  height: 200vh;
   color: white;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 40px 0;
+  padding: 60px 0;
 }
 
+.error-message {
+  color: #ff4d4f;
+  margin-bottom: 10px;
+}
 
 
 .container {
