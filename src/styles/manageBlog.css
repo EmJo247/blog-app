@@ -113,7 +113,7 @@ body.manage-blog-page {
 .button.cancel {
   background: #ff6b6b;
   color: white;
-  margin-left: 0; 
+  margin-left: 0; /* Remove left margin since we're using gap now */
 }
 
 .button.edit {
