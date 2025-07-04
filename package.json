@@ -1,4 +1,6 @@
 {
+  "homepage": "https://emjo247.github.io/blog-app/",
+  "name": "blog-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
