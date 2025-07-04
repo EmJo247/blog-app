@@ -1,26 +1,22 @@
-
-body {
-  background-size: cover;
+body.manage-blog-page {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to top right, #4b2c91, #a45de7);
   background-size: cover;
   background-position: center;
-  min-height: 160vh;
-  height: 200vh;
+  min-height: 100vh;
   color: white;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 60px 0;
+  height: 200vh;
 }
 
 .error-message {
   color: #ff4d4f;
   margin-bottom: 10px;
 }
-
 
 .container {
   background: rgba(255, 255, 255, 0.08);
@@ -95,6 +91,19 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: 5px;
+  max-width: 150px;  
+}
+
+
+.form .button {
+  align-self: center;
+  width: 200px;
+}
+
+.form > div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .button:hover {
@@ -104,7 +113,7 @@ body {
 .button.cancel {
   background: #ff6b6b;
   color: white;
-  margin-left: 10px;
+  margin-left: 0; /* Remove left margin since we're using gap now */
 }
 
 .button.edit {

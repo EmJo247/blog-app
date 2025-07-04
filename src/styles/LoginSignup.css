@@ -1,9 +1,12 @@
-body {
+html {
+   background: linear-gradient(to top right, #4b2c91, #a45de7);
+}
+
+body.login-page {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to top right, #4b2c91, #a45de7);
-  height: 100vh;
+  min-height: 98.5vh;
   background-size: cover;
   background-position: center;
   display: flex;

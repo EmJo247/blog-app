@@ -47,41 +47,41 @@ export default function LoginSignup() {
   };
 
   return (
-    <div className="login-container">
-      <h2>{isLogin ? 'Login' : 'Sign Up'}</h2>
+    <div className="login-page">
+      <div className="login-container">
+        <h2>{isLogin ? 'Login' : 'Sign Up'}</h2>
 
-      <input
-        type="email"
-        placeholder="Email"
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
 
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-
-      <button className="login" onClick={handleAuth}>
-        {isLogin ? 'Login' : 'Sign Up'}
-      </button>
-
-      <p className="Info">
-        {isLogin ? "Don't have an account?" : 'Already have an account?'}{' '}
-        <button
-          onClick={() => {
-            setIsLogin(!isLogin);
-            setMessage('');
-          }}
-          
-        >
-          {isLogin ? 'Sign up' : 'Login'}
+        <button className="login" onClick={handleAuth}>
+          {isLogin ? 'Login' : 'Sign Up'}
         </button>
-      </p>
 
-      {message && <p>{message}</p>}
+        <p className="Info">
+          {isLogin ? "Don't have an account?" : 'Already have an account?'}{' '}
+          <button
+            onClick={() => {
+              setIsLogin(!isLogin);
+              setMessage('');
+            }}
+          >
+            {isLogin ? 'Sign up' : 'Login'}
+          </button>
+        </p>
+
+        {message && <p>{message}</p>}
+      </div>
     </div>
   );
 }

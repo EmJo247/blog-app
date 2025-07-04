@@ -128,6 +128,7 @@ function ManageBlog({ userEmail }: ManageBlogProps) {
   }, [currentPage, fetchBlogs]);
 
   return (
+    <body className="manage-blog-page">
     <div className="container">
       <div className="header">
       <span className="user-email">Logged in as: {userEmail}</span>
@@ -192,6 +193,7 @@ function ManageBlog({ userEmail }: ManageBlogProps) {
         </button>
       </div>
     </div>
+    </body>
   );
 }
 
